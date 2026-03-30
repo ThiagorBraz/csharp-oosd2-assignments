@@ -29,4 +29,4 @@ collections, file handling and data management.
 ## Academic Context
 
 Developed at Atlantic Technological University (ATU), Sligo — 
-BSc (Hons) Computer Science, 2nd Semester, OOSD 2 Module.
+Higher Diploma in Computer Science, 2nd Semester, OOSD 2 Module.
