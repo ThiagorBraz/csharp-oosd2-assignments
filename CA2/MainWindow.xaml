@@ -1,0 +1,61 @@
+﻿<Window x:Class="CA2___Thiago_Braz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CA2___Thiago_Braz"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="MainWindow" Height="450" Width="800">
+        
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <RadioButton GroupName="BikeType" Tag="All" Checked="Filter_Checked" Margin="10">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Images/all.png" Height="20" Width="20" Margin="0,0,5,0"/>
+                    <TextBlock Text="All" VerticalAlignment="Center"/>
+                </StackPanel>
+            </RadioButton>
+
+            <RadioButton GroupName="BikeType" Tag="MotorBike" Checked="Filter_Checked" Margin="10">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Images/motorbike.png" Height="20" Width="20" Margin="0,0,5,0"/>
+                    <TextBlock Text="Motor Bike" VerticalAlignment="Center"/>
+                </StackPanel>
+            </RadioButton>
+
+            <RadioButton GroupName="BikeType" Tag="ElectricBike" Checked="Filter_Checked" Margin="10">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Images/electricbike.png" Height="20" Width="20" Margin="0,0,5,0"/>
+                    <TextBlock Text="Electric Bike" VerticalAlignment="Center"/>
+                </StackPanel>
+            </RadioButton>
+
+            <RadioButton GroupName="BikeType" Tag="TraditionalBike" Checked="Filter_Checked" Margin="10">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Images/bike.png" Height="20" Width="20" Margin="0,0,5,0"/>
+                    <TextBlock Text="Traditional Bike" VerticalAlignment="Center"/>
+                </StackPanel>
+            </RadioButton>
+        </StackPanel>
+
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <ListBox x:Name="lbxBikes" SelectionChanged="lbxBikes_SelectionChanged"/>
+
+            <StackPanel Grid.Column="1" Margin="10">
+                <Image x:Name="imgBike" Height="200" Margin="0,0,0,10"/>
+                <TextBlock x:Name="txtBikeDetails" FontSize="14" TextWrapping="Wrap"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
